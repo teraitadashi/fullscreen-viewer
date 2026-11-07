@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>全画面ビューア サポート</title>
+<meta name="description" content="iPhoneアプリ「HTML - 全画面ビューア」の使い方とお問い合わせ先です。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon.png">
+</head>
+<body>
+<main>
+  <header class="app">
+    <img src="icon.png" alt="">
+    <div>
+      <h1>HTML - 全画面ビューア</h1>
+      <p>サポート・使い方</p>
+    </div>
+  </header>
+
+  <p>iPhoneの「ファイル」アプリやiCloud Drive などに保存したHTMLを、画面いっぱいに表示するアプリです。</p>
+
+  <h2>使い方</h2>
+  <div class="card">
+    <ol>
+      <li>「フォルダを選択」をタップし、HTMLが入っているフォルダを選びます。</li>
+      <li>一覧のHTMLをタップすると、画面いっぱいに表示します。</li>
+      <li>表示中は、画面の<b>右上を1秒押し続ける</b>と一覧に戻ります。</li>
+    </ol>
+    <p class="muted">選んだフォルダは、次にアプリを開いたときもそのまま表示されます。</p>
+  </div>
+
+  <h2>よくある質問</h2>
+  <div class="card">
+    <h3>フォルダの中のHTMLを追加・変更したのに、一覧に出てきません</h3>
+    <p>「更新」ボタンを押すと、フォルダの中身を読み込み直します。</p>
+  </div>
+  <div class="card">
+    <h3>「iCloud からダウンロード中のファイルがあります」と表示されます</h3>
+    <p>iPhoneにまだダウンロードされていないファイルがあります。しばらく待ってから「更新」を押してください。</p>
+  </div>
+  <div class="card">
+    <h3>「フォルダが見つかりません」と表示されます</h3>
+    <p>フォルダを移動したり、名前を変えたり、削除したりした可能性があります。もう一度「フォルダを選択」から選んでください。</p>
+  </div>
+  <div class="card">
+    <h3>画面が真っ白のままです／一部が表示されません</h3>
+    <p>インターネット上の部品を読み込むHTMLは、通信できない場所では表示できないことがあります。また、AIの出力などを保存するときに、HTMLが最後まで（&lt;/html&gt; まで）保存されているか確認してください。</p>
+  </div>
+  <div class="card">
+    <h3>ゲームの記録などは消えますか</h3>
+    <p>記録はHTMLのフォルダごとに、この端末の中に保存されます。アプリを削除すると消えます。別の端末に移すときは、設定の「保存データをコピーして保存」→「貼り付けて復元」を使ってください。</p>
+  </div>
+
+  <h2>お問い合わせ</h2>
+  <div class="card">
+    <p>ご質問・不具合のご連絡は、次のメールアドレスまでお送りください。</p>
+    <p class="contact" id="mail"><noscript>teraitadashi ＠ gmail.com（＠を半角にしてください）</noscript></p>
+    <p class="muted">お使いのiPhoneの機種・iOSのバージョンと、起きたことをお知らせいただくと、早く調べられます。</p>
+  </div>
+
+  <nav>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </nav>
+</main>
+<script>
+  // メールアドレスを自動で集められにくくするため、表示するときに組み立てる
+  (function () {
+    var a = ['teraitadashi', 'gmail.com'].join('@');
+    var el = document.getElementById('mail');
+    var link = document.createElement('a');
+    link.href = 'mailto:' + a + '?subject=' + encodeURIComponent('全画面ビューアについて');
+    link.textContent = a;
+    el.textContent = '';
+    el.appendChild(link);
+  })();
+</script>
+</body>
+</html>
