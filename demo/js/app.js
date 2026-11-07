@@ -1,0 +1,1 @@
+fetch("data/fruits.json").then(function(r){return r.json()}).then(function(d){document.getElementById("list").innerHTML=d.map(function(f){return "<li>"+f.emoji+" "+f.name+"　<b>"+f.price+"円</b></li>"}).join("")}).catch(function(){document.getElementById("list").innerHTML="<li>読み込めませんでした</li>"});
