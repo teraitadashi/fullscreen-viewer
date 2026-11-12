@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>11人サッカー ドリームカップ サポート</title>
+<meta name="description" content="iPhoneアプリ「11人サッカー ドリームカップ」の遊び方とお問い合わせ先です。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon.png">
+</head>
+<body>
+<main>
+  <header class="app">
+    <img src="icon.png" alt="">
+    <div>
+      <h1>11人サッカー ドリームカップ</h1>
+      <p>サポート・遊び方</p>
+    </div>
+  </header>
+
+  <p>作戦を選ぶだけで遊べる、11人制のサッカーゲームです。選手の配置とDFラインを読んで、パス・ドリブル・クロス・シュートなどを選ぶと、選手が自動でプレーします。</p>
+
+  <h2>遊び方</h2>
+  <div class="card">
+    <ol>
+      <li>「大会をはじめる」をタップし、レベル（地区予選・全国大会・プロ）を選びます。</li>
+      <li>攻撃では、画面下のボタンから作戦を選びます。右上のミニマップで、味方と相手の位置やDFライン（オフサイドライン）を確かめられます。</li>
+      <li>守備では、守り方（ハイプレス・ミドルブロック・ローブロック・オフサイドトラップなど）を選びます。</li>
+      <li>前半・後半の試合（早送りで進みます）。同点ならPK戦。8チームのトーナメントを3連勝すると優勝です。</li>
+    </ol>
+    <p class="muted">試合は攻撃が切り替わるたびに自動で保存されます。途中でやめても「つづきから」で再開できます。</p>
+  </div>
+
+  <h2>無料版と広告削除パス</h2>
+  <div class="card">
+    <p>アプリは無料で遊べます。最初の1試合は広告なしで、2試合目からはハーフタイムに全画面の広告が出ます。</p>
+    <p>無料版は、大会が終わるとチームが最初の設定に戻ります。大会のあとに「🎬 広告を見て、このチームを残す」を選んで広告を最後まで見ると、次の大会までチームを残せます。</p>
+    <p><b>広告削除パス（100円・買い切り）</b>を購入すると、次の特典が使えます。</p>
+    <ul>
+      <li>広告を完全に削除</li>
+      <li>チームを5つまで保存（無料版は大会が終わるとチームが最初の設定に戻ります）</li>
+      <li>チームごとの戦歴（各大会で何位だったか）の表示</li>
+    </ul>
+  </div>
+
+  <h2>よくある質問</h2>
+  <div class="card">
+    <h3>機種変更・再インストールで広告削除パスが消えました</h3>
+    <p>購入したときと同じ Apple Account でサインインし、アプリの「広告削除パス」または「設定」にある「購入を復元」をタップしてください。もう一度お金はかかりません。</p>
+  </div>
+  <div class="card">
+    <h3>音が鳴りません</h3>
+    <p>iPhoneの消音スイッチ（着信/消音スイッチ）がオフになっているか確認してください。アプリの「設定」で、サウンドがONになっているかも確認してください。</p>
+  </div>
+  <div class="card">
+    <h3>動きが重いです</h3>
+    <p>アプリの「設定」→「画質」を「軽量」にすると、影などを省いて軽くなります。</p>
+  </div>
+  <div class="card">
+    <h3>チームの名前やユニフォームを変えたい</h3>
+    <p>タイトル画面の「チーム」から、チーム名・略称・ユニフォームの色・フォーメーションと、選手の名前・性別・髪型・背番号を変えられます。</p>
+  </div>
+  <div class="card">
+    <h3>記録やチームを別のiPhoneに移したい</h3>
+    <p>記録はこの端末の中に保存され、アプリを削除すると消えます。移すときは、アプリの「設定」の「コピーして保存」で文字をコピーし、移した先で「貼り付けて復元」を使ってください。</p>
+  </div>
+
+  <h2>お問い合わせ</h2>
+  <div class="card">
+    <p>ご質問・不具合のご連絡は、次のメールアドレスまでお送りください。</p>
+    <p class="contact" id="mail"><noscript>teraitadashi ＠ gmail.com（＠を半角にしてください）</noscript></p>
+    <p class="muted">お使いのiPhoneの機種・iOSのバージョンと、起きたことをお知らせいただくと、早く調べられます。</p>
+  </div>
+
+  <nav>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </nav>
+</main>
+<script>
+  // メールアドレスを自動で集められにくくするため、表示するときに組み立てる
+  (function () {
+    var a = ['teraitadashi', 'gmail.com'].join('@');
+    var el = document.getElementById('mail');
+    var link = document.createElement('a');
+    link.href = 'mailto:' + a + '?subject=' + encodeURIComponent('11人サッカー ドリームカップについて');
+    link.textContent = a;
+    el.textContent = '';
+    el.appendChild(link);
+  })();
+</script>
+</body>
+</html>
