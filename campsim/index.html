@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>キャンプ配置シミュレーター サポート</title>
+<meta name="description" content="iPhoneアプリ「キャンプ配置シミュレーター」の使い方とお問い合わせ先です。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon.png">
+</head>
+<body>
+<main>
+  <header class="app">
+    <img src="icon.png" alt="">
+    <div>
+      <h1>キャンプ配置シミュレーター</h1>
+      <p>サポート・使い方</p>
+    </div>
+  </header>
+
+  <p>テント・タープ・チェア・車などを、キャンプ場の区画に実寸大で置いて「入るか？」を確かめられるアプリです。張り綱の余白も計算し、2Dの平面図とリアルな3Dで設営のイメージをつかめます。</p>
+
+  <h2>使い方</h2>
+  <div class="card">
+    <ol>
+      <li>画面下の「区画設定」で、区画の広さ（間口・奥行き）と地面の種類を選びます。よくあるサイズや、架空のキャンプ場の区画からも選べます。</li>
+      <li>「＋ ギア追加」で、テント・タープ・テーブル・チェア・焚き火台・車などを選ぶと、区画に実寸大で置かれます。一覧にないギアは「ギア登録」で寸法を入れて追加できます。</li>
+      <li>2D平面図では、ギアを指でドラッグして移動し、上の丸いハンドルで回転します。2本指で拡大・縮小と画面移動ができます。</li>
+      <li>上の「3D リアル」で、実際の見え方を確かめられます。昼・夕方・夜（焚き火・ランタンの明かり）を切り替えられます。</li>
+      <li>はみ出しや重なりがあると知らせます。「戻す」でひとつ前の状態に戻せます。</li>
+    </ol>
+  </div>
+
+  <h2>無料版と「広告削除＋サイト保存」</h2>
+  <div class="card">
+    <p>アプリは無料で使えます。無料版では、画面下にバナー広告が表示されます。</p>
+    <p><b>広告削除＋サイト保存（100円・買い切り）</b>を購入すると、次の機能が使えます。</p>
+    <ul>
+      <li>画面下の広告を削除</li>
+      <li>作ったサイト（区画とギアの配置）を何件でも保存・読み込み・上書き</li>
+    </ul>
+    <p class="muted">1回の購入でずっと使えます。自動で更新される料金（サブスクリプション）はありません。</p>
+  </div>
+
+  <h2>よくある質問</h2>
+  <div class="card">
+    <h3>機種変更・再インストールで購入した内容が消えました</h3>
+    <p>購入したときと同じ Apple Account でサインインし、アプリの「設定」（右上の⚙️）または「保存」画面にある「購入を復元」をタップしてください。もう一度お金はかかりません。</p>
+  </div>
+  <div class="card">
+    <h3>のっているギアは実際の商品ですか</h3>
+    <p>よくある大きさを参考にした汎用のモデルで、特定のメーカーや商品を表すものではありません。お持ちのギアの寸法を入れたいときは「ギア登録」をお使いください。キャンプ場もすべて架空です。</p>
+  </div>
+  <div class="card">
+    <h3>3Dの表示が重いときは</h3>
+    <p>大きな区画にたくさんのギアを置くと、3Dの準備に少し時間がかかります。ほかのアプリを閉じてからお試しください。</p>
+  </div>
+  <div class="card">
+    <h3>不適切な広告が表示されました</h3>
+    <p>広告の内容（わかれば画面のスクリーンショット）を添えて、下のお問い合わせ先までお知らせください。</p>
+  </div>
+
+  <h2>お問い合わせ</h2>
+  <div class="card">
+    <p>ご質問・不具合のご連絡は、次のメールアドレスまでお送りください。</p>
+    <p class="contact" id="mail"><noscript>teraitadashi ＠ gmail.com（＠を半角にしてください）</noscript></p>
+    <p class="muted">お使いのiPhoneの機種・iOSのバージョンと、起きたことをお知らせいただくと、早く調べられます。</p>
+  </div>
+
+  <nav>
+    <a href="privacy.html">プライバシーポリシー</a>
+  </nav>
+</main>
+<script>
+  // メールアドレスを自動で集められにくくするため、表示するときに組み立てる
+  (function () {
+    var a = ['teraitadashi', 'gmail.com'].join('@');
+    var el = document.getElementById('mail');
+    var link = document.createElement('a');
+    link.href = 'mailto:' + a + '?subject=' + encodeURIComponent('キャンプ配置シミュレーターについて');
+    link.textContent = a;
+    el.textContent = '';
+    el.appendChild(link);
+  })();
+</script>
+</body>
+</html>
